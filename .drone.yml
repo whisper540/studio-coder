@@ -1,0 +1,28 @@
+# analysis检查
+kind: pipeline
+type: ssh
+name: analysis
+
+server:
+    host:
+        from_secret: host_port
+    user:
+        from_secret: host_username
+    password:
+        from_secret: host_password
+platform:
+    os: linux
+    arch: amd64
+clone:
+    disable: true
+
+steps:
+    - name: init_analysis
+      commands:
+          - echo start analysis
+trigger:
+    event:
+        - push
+        - pull-request
+    branch:
+        - develop
