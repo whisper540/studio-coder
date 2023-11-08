@@ -2,6 +2,14 @@ export default
 {
     nodes: [
         {
+            type: "UserTask",
+            x: 400,
+            y: 400,
+            properties:{
+                statu: "pass"
+            },
+        },
+        {
             id: "node_id_1",
             type: "rect",
             x: 100,

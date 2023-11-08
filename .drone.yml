@@ -26,3 +26,53 @@ trigger:
         - pull-request
     branch:
         - develop
+
+---
+# nas.anliu.space:****
+kind: secret
+name: host_port
+get:
+    path: drone/data/docker
+    name: host_port
+---
+# ****
+kind: secret
+name: host_username
+get:
+    path: drone/data/docker
+    name: host_username
+---
+# ***************
+kind: secret
+name: host_password
+get:
+    path: drone/data/docker
+    name: host_password
+---
+# nas.anliu.space:10000
+kind: secret
+name: registry_host_port
+get:
+    path: drone/data/docker
+    name: registry_host_port
+---
+# nas.anliu.space:10000/frontend/studio_coder:latest
+kind: secret
+name: registry_host_port_repo
+get:
+    path: drone/data/docker
+    name: registry_host_port_repo
+---
+# admin
+kind: secret
+name: registry_username
+get:
+    path: drone/data/docker
+    name: registry_username
+---
+# admin
+kind: secret
+name: registry_password
+get:
+    path: drone/data/docker
+    name: registry_password

@@ -4,6 +4,7 @@ import type { Ref } from 'vue'
 import LogicFlow from "@logicflow/core";
 import "@logicflow/core/dist/style/index.css";
 import graphData from '@/components/coder/graph_data';
+import UserTaskNode from "@/nodes/UserTaskNode";
 
 const container:Ref<HTMLElement|null> = ref(null)
 const lf:Ref<LogicFlow|null> = ref(null);
@@ -13,6 +14,7 @@ onMounted(()=>{
         container: container.value!,
         grid: true,
     });
+    lf.value?.register(UserTaskNode);
     lf.value.render(graphData);
 })
 </script>
